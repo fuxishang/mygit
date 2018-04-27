@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/zepto.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/event.js"></script>
+</head>
+<body>
+    <form method="GET" id="form">
+        <input type="text" name="user">
+        <input type="password" name="pwd">
+        <input type="checkbox" name="ch" value="1">
+        <input type="checkbox" name="ch" value="2">
+        <input type="checkbox" name="ch" value="3">
+        <input type="checkbox" name="ch" value="4">
+        <input type="submit" name="sub">
+        <input type="button" id="btn">
+    </form>
+    <script>
+        var form = $("form");
+
+        form.submit(function(){
+            // var res = form.serialize();
+            // alert(res);
+
+            
+
+        })
+
+        $("#btn").click(function(){
+            var resArray = form.serializeArray();
+            console.log(resArray);
+        })
+    
+    </script>
+</body>
+</html>

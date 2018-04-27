@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+    <style>
+        #d1{
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+    </style>
+    <div id="d1"></div>
+
+    <button id="btn">按钮</button>
+    <script>
+        
+        console.log($("#d1").width());
+        var btn = $("#btn");
+            btn.click(function () {
+
+                $.ajax({
+                    url: "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=js",
+                    type: "get",
+                    dataType: "jsonp",
+                    jsonp: 'cb',
+                    jsonpCallback: "cm",
+                    success: function (data) {
+                        console.log(data)
+                    }
+                })
+            })
+    </script>
+</body>
+</html>

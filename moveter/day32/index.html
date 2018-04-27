@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/zepto.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/event.js"></script>
+</head>
+<body>
+    <!-- 
+        zepto：类似jquery的插件，级轻量级的插件
+
+        
+
+    -->
+
+    <div id="d1">
+        hello world
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li> 
+    </ul>
+
+    <button id="btn">按钮</button>
+
+    <input id="inp" type="text" checked="checked">
+    <script>
+
+        console.log($===Zepto)
+
+        var d1 = $("#d1")
+        $(function(){
+            // console.log("hello world")
+
+            console.log($("#d1"));
+            console.log($("li"));
+
+        })
+
+        d1.attr("index","1")
+        console.log($("#inp").attr("checked"))
+
+
+        var str = "hello world";
+        var obj = {
+            name:"a",
+            age:20
+        }
+
+        $.each(obj,function(index, value){
+            console.log(index+"----"+value)
+        })
+
+        
+        var btn = $("#btn");
+        btn.on("click",function(){
+           
+            $.ajax({
+                url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=js",
+                type:"get",
+                dataType:"jsonp",
+                jsonp:'cb',
+                jsonpCallback:"cm",
+                success:function(data){
+                    console.log(data)
+                }
+            })
+        })
+
+        var ul = $("ul");
+        ul.on("click",$("li"),function(){
+            console.log(this);
+        })
+
+
+
+        
+
+
+    </script>
+
+</body>
+</html>

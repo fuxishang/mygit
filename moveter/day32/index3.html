@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/zepto.js"></script>
+    <script src="js/event.js"></script>
+    <script src="js/touch.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #bcbcbc;
+        }
+        #d1{
+            width: 200px;
+            height: 300px;
+            border: 5px solid #333;
+            padding: 20px;
+            margin: 10px;
+            background-color: #ff6700;
+        }
+        #d2{
+            width: 200px;
+            height: 300px;
+            border: 5px solid #333;
+            padding: 20px;
+            margin: 10px;
+            background-color: #ff6700;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <!-- <div id="d2"></div> -->
+    <script>
+        
+        var d1 = $("#d1");
+        /*
+        console.log(d1.offset().left);
+        console.log(d1.offset().top);
+        console.log(d1.offset().width);
+        console.log(d1.offset().height);
+
+        console.log(d1.width());
+        console.log(d1.height());
+        
+        var d2 = $("#d2");
+        console.log(d2.width());
+        */
+
+        // tap 触摸事件
+        // swipe 滑动事件
+        // 
+        
+        d1.tap(function(){
+            console.log("tap")
+        })
+
+        // d1.doubleTap(function(){
+        //     console.log("dbtap")
+        // })
+
+        d1.longTap(function(){
+            console.log("longtap")
+        })
+
+        // d1.swipe(function(){
+        //     console.log("swipe")
+        // })
+
+        d1.swipeLeft(function(){
+            console.log("left")
+        })
+        d1.swipeRight(function(){
+            console.log("right")
+        })
+
+    </script>
+</body>
+</html>
